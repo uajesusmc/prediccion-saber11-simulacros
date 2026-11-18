@@ -7,7 +7,7 @@ Especialización en Estadística Aplicada, Facultad de Ingeniería y Ciencias B�
 
 ## Resumen
 
-La I.E.T.A. Juan Domínguez Romero de Caracolí (Malambo, Atlántico) aplica cada año dos simulacros de una empresa externa (S1 y S2) antes de Saber 11° y con ellos decide a quién reforzar. Este proyecto evalúa si esos simulacros anticipan el puntaje global oficial y propone una regla para priorizar el refuerzo.
+La Institución Educativa Técnica Agrícola (I.E.T.A.) Juan Domínguez Romero de Caracolí (Malambo, Atlántico) aplica cada año dos simulacros de una empresa externa (S1 y S2) antes de Saber 11° y con ellos decide a quién reforzar. Este proyecto evalúa si esos simulacros anticipan el puntaje global oficial y propone una regla para priorizar el refuerzo.
 
 - Entrenamiento con la cohorte 2025 (n = 45) y evaluación con la cohorte 2026 (n = 52).
 - Modelo elegido: regresión lineal y logística con el promedio de los dos simulacros, S̄ = (S1 + S2)/2.
@@ -42,6 +42,7 @@ Para compilar el artículo, abre `articulo/main.tex` en TeXstudio u Overleaf y c
 ## Datos y ética
 
 - Las bases no contienen nombres ni documentos de identidad: cada estudiante tiene un código (E001, E002, …). La tabla que vincula códigos y nombres está bajo custodia de la institución y **no** forma parte de este repositorio.
+- El rector de la institución autorizó el uso de los datos en esta investigación, con la condición de que no apareciera el nombre de ningún estudiante.
 - El tratamiento de los datos sigue la Ley Estatutaria 1581 de 2012 de Colombia sobre protección de datos personales.
 - Los datos se comparten solo con fines académicos y de reproducibilidad. No intentes reidentificar a los estudiantes.
 
