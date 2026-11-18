@@ -19,7 +19,7 @@ La Institución Educativa Técnica Agrícola (I.E.T.A.) Juan Domínguez Romero d
 
 | Carpeta | Contenido |
 | --- | --- |
-| `datos/` | Bases de modelado (MDT) anonimizadas de 2025 y 2026. Cada hoja `LEEME` y `DICCIONARIO` describe las variables |
+| `datos/` | Bases de modelado anonimizadas de 2025 y 2026. Las hojas `LEEME` y `DICCIONARIO` de cada archivo describen las variables |
 | `analisis/` | `Anexo_tecnico_modelo_Saber11.ipynb` (modelos, umbrales, figuras de los anexos), `incertidumbre_bootstrap_mcnemar.py` (intervalos de Clopper–Pearson, bootstrap y prueba de McNemar) e `interpretabilidad_coeficientes.py` (coeficientes, intervalos y valores p) |
 | `herramienta/` | Hoja de cálculo para aplicar la regla de prioridades a una cohorte nueva |
 | `articulo/` | Artículo en LaTeX (`main.tex`), figuras (`img/`) y PDF compilado |

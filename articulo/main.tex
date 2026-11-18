@@ -130,7 +130,7 @@ En la I.E.T.A. Juan Domínguez Romero de Caracolí, la empresa entrega con cada 
 %==================  DATOS
 \section{Datos y síntesis del análisis exploratorio}
 
-Se usaron las bases de modelado (MDT) anonimizadas de 2025 y 2026, con una fila por estudiante y tres mediciones en orden temporal: S1, S2 y Saber~11°. El análisis principal incluye los 97 estudiantes con las tres pruebas observadas; los 15 que faltaron a un simulacro se reservaron para un análisis de sensibilidad. De todo el análisis exploratorio se seleccionaron tres gráficos, porque son los que explican las decisiones del modelo.
+Se usaron las bases de modelado anonimizadas de 2025 y 2026, con una fila por estudiante y tres mediciones en orden temporal: S1, S2 y Saber~11°. El análisis principal incluye los 97 estudiantes con las tres pruebas observadas; los 15 que faltaron a un simulacro se reservaron para un análisis de sensibilidad. De todo el análisis exploratorio se seleccionaron tres gráficos, porque son los que explican las decisiones del modelo.
 
 \begin{figure*}[!t]
     \centering
@@ -414,7 +414,7 @@ CAMBIO\_S2\_S1 & Combinación lineal exacta de S1 y S2 (colinealidad perfecta). 
 ID\_ESTUDIANTE & Identificador anonimizado. \\
 \bottomrule
 \end{tabularx}
-\caption{Variables de la MDT que no entran al modelo.}
+\caption{Variables de la base de modelado que no entran al modelo.}
 \label{tb:excluidas}
 \end{table}
 
@@ -436,7 +436,7 @@ La colinealidad se revisó solo en Train (figura~\ref{fig:colinealidad}). La cor
 Todo paso que aprende de los datos se ajustó solo con Train, dentro de un \textit{pipeline} de scikit-learn \parencite{pedregosa2011scikit}:
 
 \begin{itemize}
-    \item \textit{Imputación:} SimpleImputer (mediana) en el análisis principal e IterativeImputer en el de sensibilidad. Para este último, los valores que la MDT tenía imputados se volvieron a marcar como faltantes y se imputaron dentro del \textit{pipeline}, de modo que la imputación de Test usa solo lo aprendido en Train \parencite{vanbuuren2018flexible}.
+    \item \textit{Imputación:} SimpleImputer (mediana) en el análisis principal e IterativeImputer en el de sensibilidad. Para este último, los valores que la base de modelado tenía imputados se volvieron a marcar como faltantes y se imputaron dentro del \textit{pipeline}, de modo que la imputación de Test usa solo lo aprendido en Train \parencite{vanbuuren2018flexible}.
     \item \textit{Escalado:} StandardScaler, ajustado con la media y la desviación de Train.
     \item \textit{Validación cruzada interna:} en cada pliegue el \textit{pipeline} completo se reajusta, así que el pliegue de validación tampoco influye en la imputación ni en el escalado.
 \end{itemize}
@@ -576,6 +576,6 @@ La tabla~\ref{tb:clasificacion} compara los clasificadores y la figura~\ref{fig:
 
 \subsection*{C-4. Reproducibilidad}
 
-Las cifras de este documento se generan con el cuaderno \texttt{Anexo\_tecnico\_modelo\_Saber11.ipynb}, que lee las dos bases MDT anonimizadas y fija la semilla aleatoria en 2025. Los intervalos de confianza, el \textit{bootstrap} y la prueba de McNemar se calculan con el script \texttt{incertidumbre\_bootstrap\_mcnemar.py}, que reproduce las predicciones de cada estudiante a partir de las mismas bases, y los coeficientes de la sección IV-B, con \texttt{interpretabilidad\_coeficientes.py}.
+Las cifras de este documento se generan con el cuaderno \texttt{Anexo\_tecnico\_modelo\_Saber11.ipynb}, que lee las dos bases de modelado anonimizadas y fija la semilla aleatoria en 2025. Los intervalos de confianza, el \textit{bootstrap} y la prueba de McNemar se calculan con el script \texttt{incertidumbre\_bootstrap\_mcnemar.py}, que reproduce las predicciones de cada estudiante a partir de las mismas bases, y los coeficientes de la sección IV-B, con \texttt{interpretabilidad\_coeficientes.py}.
 
 \end{document}
