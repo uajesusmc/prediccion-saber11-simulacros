@@ -9,7 +9,7 @@ Especialización en Estadística Aplicada, Facultad de Ingeniería y Ciencias B�
 
 La Institución Educativa Técnica Agrícola (I.E.T.A.) Juan Domínguez Romero de Caracolí (Malambo, Atlántico) aplica cada año dos simulacros de una empresa externa (S1 y S2) antes de Saber 11° y con ellos decide a quién reforzar. Este proyecto evalúa si esos simulacros anticipan el puntaje global oficial y propone una regla para priorizar el refuerzo.
 
-- Entrenamiento con la cohorte 2025 (n = 45) y evaluación con la cohorte 2026 (n = 52).
+- Entrenamiento con el año 2025 (n = 45) y evaluación con el año 2026 (n = 52).
 - Modelo elegido: regresión lineal y logística con el promedio de los dos simulacros, S̄ = (S1 + S2)/2.
 - Ecuación: **SB11 estimado = 45,7 + 0,906 · S̄** (MAE en Test de 18,1 puntos, frente a 27,7 de la línea base).
 - Clasificación del riesgo (cuartil inferior): AUC de 0,87 en Test y sensibilidad de 1,00. Supera a la regla de la empresa (nivel I/1) en la comparación pareada (McNemar exacta, p = 0,004).
@@ -21,7 +21,7 @@ La Institución Educativa Técnica Agrícola (I.E.T.A.) Juan Domínguez Romero d
 | --- | --- |
 | `datos/` | Bases de modelado anonimizadas de 2025 y 2026. Las hojas `LEEME` y `DICCIONARIO` de cada archivo describen las variables |
 | `analisis/` | `Anexo_tecnico_modelo_Saber11.ipynb` (modelos, umbrales, figuras de los anexos), `incertidumbre_bootstrap_mcnemar.py` (intervalos de Clopper–Pearson, bootstrap y prueba de McNemar) e `interpretabilidad_coeficientes.py` (coeficientes, intervalos y valores p) |
-| `herramienta/` | Hoja de cálculo para aplicar la regla de prioridades a una cohorte nueva |
+| `herramienta/` | Hoja de cálculo para aplicar la regla de prioridades a los estudiantes de un año nuevo |
 | `articulo/` | Artículo en LaTeX (`main.tex`), figuras (`img/`) y PDF compilado |
 
 ## Cómo reproducir

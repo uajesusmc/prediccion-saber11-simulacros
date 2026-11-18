@@ -107,12 +107,12 @@ Can an External Company's Mock Tests Anticipate Saber 11° Results? A Predictive
 
 %==================  RESUMEN Y ABSTRACT (en la primera columna, negrilla, como IEEE)
 {\fontsize{9}{10.5}\selectfont\bfseries
-\noindent\textit{Resumen}---Contexto: En las cohortes 2025 y 2026, la Institución Educativa Técnica Agrícola (I.E.T.A.) Juan Domínguez Romero de Caracolí (Malambo, Atlántico) estableció convenios con una empresa externa para preparar a sus estudiantes para la prueba Saber~11°. La preparación consistió en dos simulacros (S1 y S2) aplicados antes de la prueba oficial, y con sus resultados la institución decidió a quién reforzar. Propósito: Esta investigación evaluó si esa información servía para anticipar el puntaje global oficial (SB11\_GLOBAL, escala 0--500) y para identificar a tiempo a los estudiantes que terminarían en el cuartil inferior de su promoción. Metodología: Con los 97 estudiantes que presentaron las tres pruebas, se entrenaron modelos con la cohorte 2025 (Train, \textit{n}~=~45) y se evaluaron con la cohorte 2026 (Test, \textit{n}~=~52), que no intervino en el ajuste. Resultados: Una regresión lineal con el promedio de S1 y S2 redujo el error medio absoluto de 27,7 puntos (línea base) a 18,1 (IC 95\,\%: 14,6--21,7). Una regresión logística con la misma variable alcanzó en Test un AUC de 0,87 (IC 95\,\%: 0,77--0,95), una sensibilidad de 1,00 (IC 95\,\%: 0,75--1,00) y una exactitud balanceada de 0,83 en el umbral elegido. Frente a la regla que usaba la empresa (nivel I/1), el modelo cometió menos errores de clasificación (prueba exacta de McNemar, \textit{p}~=~0,004) y elevó la especificidad de 0,49 a 0,67. Los modelos más complejos no mejoraron estos resultados y mostraron sobreajuste. Conclusiones: El estudio produjo una regla de tres prioridades (alta, media y baja), aplicable con solo el promedio de los dos simulacros.
+\noindent\textit{Resumen}---Contexto: En los años 2025 y 2026, la Institución Educativa Técnica Agrícola (I.E.T.A.) Juan Domínguez Romero de Caracolí (Malambo, Atlántico) estableció convenios con una empresa externa para preparar a sus estudiantes para la prueba Saber~11°. La preparación consistió en dos simulacros (S1 y S2) aplicados antes de la prueba oficial, y con sus resultados la institución decidió a quién reforzar. Propósito: Esta investigación evaluó si esa información servía para anticipar el puntaje global oficial (SB11\_GLOBAL, escala 0--500) y para identificar a tiempo a los estudiantes que terminarían en el cuartil inferior de su promoción. Metodología: Con los 97 estudiantes que presentaron las tres pruebas, se entrenaron modelos con el año 2025 (Train, \textit{n}~=~45) y se evaluaron con el año 2026 (Test, \textit{n}~=~52), que no intervino en el ajuste. Resultados: Una regresión lineal con el promedio de S1 y S2 redujo el error medio absoluto de 27,7 puntos (línea base) a 18,1 (IC 95\,\%: 14,6--21,7). Una regresión logística con la misma variable alcanzó en Test un AUC de 0,87 (IC 95\,\%: 0,77--0,95), una sensibilidad de 1,00 (IC 95\,\%: 0,75--1,00) y una exactitud balanceada de 0,83 en el umbral elegido. Frente a la regla que usaba la empresa (nivel I/1), el modelo cometió menos errores de clasificación (prueba exacta de McNemar, \textit{p}~=~0,004) y elevó la especificidad de 0,49 a 0,67. Los modelos más complejos no mejoraron estos resultados y mostraron sobreajuste. Conclusiones: El estudio produjo una regla de tres prioridades (alta, media y baja), aplicable con solo el promedio de los dos simulacros.
 
 \textit{Palabras clave}---Saber 11°, simulacros, aprendizaje automático, alerta temprana, validación temporal.
 
 \begin{otherlanguage}{english}
-	\textit{Abstract}---Context: For the 2025 and 2026 cohorts, the Institución Educativa Técnica Agrícola (I.E.T.A.) Juan Domínguez Romero school in Caracolí (Malambo, Atlántico) entered into agreements with an external company to prepare its students for the Saber~11° exam. This preparation consisted of two mock tests (S1 and S2) administered before the official exam, and the school used their results to decide which students would receive extra support. Purpose: This research assessed whether that information could anticipate the official global score (SB11\_GLOBAL, 0--500 scale) and identify, in time, the students who would end up in the bottom quartile of their cohort. Methodology: Using the 97 students who sat all three tests, models were trained on the 2025 cohort (Train, \textit{n}~=~45) and evaluated on the 2026 cohort (Test, \textit{n}~=~52), which was not used for fitting. Results: A linear regression on the average of S1 and S2 reduced the mean absolute error from 27.7 points (baseline) to 18.1 (95\,\% CI: 14.6--21.7). A logistic regression on the same variable reached, on Test, an AUC of 0.87 (95\,\% CI: 0.77--0.95), a sensitivity of 1.00 (95\,\% CI: 0.75--1.00) and a balanced accuracy of 0.83 at the chosen threshold. Compared with the rule used by the company (level I/1), the model made fewer classification errors (exact McNemar test, \textit{p}~=~0.004) and raised specificity from 0.49 to 0.67. More complex models did not improve these results and showed overfitting. Conclusions: The study produced a three-level priority rule (high, medium and low) that can be applied using only the average of the two mock tests.
+	\textit{Abstract}---Context: In 2025 and 2026, the Institución Educativa Técnica Agrícola (I.E.T.A.) Juan Domínguez Romero school in Caracolí (Malambo, Atlántico) entered into agreements with an external company to prepare its students for the Saber~11° exam. This preparation consisted of two mock tests (S1 and S2) administered before the official exam, and the school used their results to decide which students would receive extra support. Purpose: This research assessed whether that information could anticipate the official global score (SB11\_GLOBAL, 0--500 scale) and identify, in time, the students who would end up in the bottom quartile of their year. Methodology: Using the 97 students who sat all three tests, models were trained on 2025 data (Train, \textit{n}~=~45) and evaluated on 2026 data (Test, \textit{n}~=~52), which was not used for fitting. Results: A linear regression on the average of S1 and S2 reduced the mean absolute error from 27.7 points (baseline) to 18.1 (95\,\% CI: 14.6--21.7). A logistic regression on the same variable reached, on Test, an AUC of 0.87 (95\,\% CI: 0.77--0.95), a sensitivity of 1.00 (95\,\% CI: 0.75--1.00) and a balanced accuracy of 0.83 at the chosen threshold. Compared with the rule used by the company (level I/1), the model made fewer classification errors (exact McNemar test, \textit{p}~=~0.004) and raised specificity from 0.49 to 0.67. More complex models did not improve these results and showed overfitting. Conclusions: The study produced a three-level priority rule (high, medium and low) that can be applied using only the average of the two mock tests.
 	
 	\textit{Index Terms}---Saber 11°, mock tests, machine learning, early warning, temporal validation.
 \end{otherlanguage}
@@ -135,11 +135,11 @@ Se usaron las bases de modelado anonimizadas de 2025 y 2026, con una fila por es
 \begin{figure*}[!t]
     \centering
     \includegraphics[width=0.9\textwidth]{img/fig1_distribucion_cohortes.png}
-    \caption{Distribución del puntaje global por prueba y cohorte (el rombo indica la media).}
+    \caption{Distribución del puntaje global por prueba y año (el rombo indica la media).}
     \label{fig:distribucion}
 \end{figure*}
 
-\textit{La variable objetivo y la necesidad de calibrar.} La figura~\ref{fig:distribucion} muestra dos hechos. Primero, SB11\_GLOBAL tiene una distribución casi simétrica y medias muy parecidas en las dos cohortes (232,6 y 234,5; \textit{t} de Welch~=~$-0{,}25$, \textit{p}~=~0,80), lo que permite entrenar con un año y evaluar con el otro. Segundo, los simulacros quedan entre 22 y 30 puntos por debajo del resultado oficial. Por eso el puntaje bruto del simulacro no puede usarse como estimación: hace falta un modelo que lo calibre.
+\textit{La variable objetivo y la necesidad de calibrar.} La figura~\ref{fig:distribucion} muestra dos hechos. Primero, SB11\_GLOBAL tiene una distribución casi simétrica y medias muy parecidas en los dos años (232,6 y 234,5; \textit{t} de Welch~=~$-0{,}25$, \textit{p}~=~0,80), lo que permite entrenar con un año y evaluar con el otro. Segundo, los simulacros quedan entre 22 y 30 puntos por debajo del resultado oficial. Por eso el puntaje bruto del simulacro no puede usarse como estimación: hace falta un modelo que lo calibre.
 
 \begin{figure}[!t]
     \centering
@@ -148,7 +148,7 @@ Se usaron las bases de modelado anonimizadas de 2025 y 2026, con una fila por es
     \label{fig:correlacion}
 \end{figure}
 
-\textit{Qué predictores usar.} En la figura~\ref{fig:correlacion}, S2 Global (\textit{r}~=~0,77) y S1 Global (\textit{r}~=~0,69) son las variables más asociadas con el objetivo; Inglés es la más débil en ambos simulacros (\textit{r}~$\approx$~0,25). S1 y S2 están relacionados (\textit{r}~=~0,64 con las dos cohortes juntas), pero no son redundantes, y su promedio alcanza \textit{r}~=~0,81. Esto justifica dos familias de modelos: una sencilla, con el promedio de S1 y S2, y otra con las diez áreas por separado, para comprobar si el detalle por área añade algo.
+\textit{Qué predictores usar.} En la figura~\ref{fig:correlacion}, S2 Global (\textit{r}~=~0,77) y S1 Global (\textit{r}~=~0,69) son las variables más asociadas con el objetivo; Inglés es la más débil en ambos simulacros (\textit{r}~$\approx$~0,25). S1 y S2 están relacionados (\textit{r}~=~0,64 con los dos años juntos), pero no son redundantes, y su promedio alcanza \textit{r}~=~0,81. Esto justifica dos familias de modelos: una sencilla, con el promedio de S1 y S2, y otra con las diez áreas por separado, para comprobar si el detalle por área añade algo.
 
 \begin{figure}[!t]
     \centering
@@ -166,11 +166,11 @@ Se usaron las bases de modelado anonimizadas de 2025 y 2026, con una fila por es
 
 \subsection{Tareas de predicción}
 
-Se plantearon dos tareas supervisadas sobre la misma base. En la regresión, el objetivo es SB11\_GLOBAL. En la clasificación, el objetivo es si el estudiante queda en el cuartil inferior de Saber~11° de su propia cohorte (riesgo~=~1). Se eligió una definición relativa para que la etiqueta señale, en cada promoción, al grupo de menor desempeño y mantenga una prevalencia estable entre cohortes. El cuartil define quién está en riesgo, no cuántos estudiantes reciben apoyo: ese número lo determina el umbral de decisión, que favorece la sensibilidad porque omitir a un estudiante en riesgo se considera más costoso que reforzar a uno que no lo necesitaba (Anexo~B). Por eso el grupo con refuerzo resulta mayor que el cuartil. La prevalencia de la clase positiva es del 26,7\,\% en Train y del 25,0\,\% en Test.
+Se plantearon dos tareas supervisadas sobre la misma base. En la regresión, el objetivo es SB11\_GLOBAL. En la clasificación, el objetivo es si el estudiante queda en el cuartil inferior de Saber~11° de su propio año (riesgo~=~1). Se eligió una definición relativa para que la etiqueta señale, en cada promoción, al grupo de menor desempeño y mantenga una prevalencia estable entre años. El cuartil define quién está en riesgo, no cuántos estudiantes reciben apoyo: ese número lo determina el umbral de decisión, que favorece la sensibilidad porque omitir a un estudiante en riesgo se considera más costoso que reforzar a uno que no lo necesitaba (Anexo~B). Por eso el grupo con refuerzo resulta mayor que el cuartil. La prevalencia de la clase positiva es del 26,7\,\% en Train y del 25,0\,\% en Test.
 
 \subsection{Separación de los datos}
 
-La división fue temporal: Train~=~cohorte 2025 (\textit{n}~=~45; 46,4\,\%) y Test~=~cohorte 2026 (\textit{n}~=~52; 53,6\,\%). Se prefirió a una partición aleatoria porque reproduce el uso real del modelo (aprender con una promoción y aplicarlo a la siguiente) y evita que estudiantes de un mismo año queden repartidos entre entrenamiento y prueba \parencite{hastie2009elements,kaufman2012leakage}. El conjunto Test solo se usó para la evaluación final. Dentro de Train:
+La división fue temporal: Train~=~año 2025 (\textit{n}~=~45; 46,4\,\%) y Test~=~año 2026 (\textit{n}~=~52; 53,6\,\%). Se prefirió a una partición aleatoria porque reproduce el uso real del modelo (aprender con una promoción y aplicarlo a la siguiente) y evita que estudiantes de un mismo año queden repartidos entre entrenamiento y prueba \parencite{hastie2009elements,kaufman2012leakage}. El conjunto Test solo se usó para la evaluación final. Dentro de Train:
 
 \begin{itemize}
     \item los hiperparámetros se ajustaron con validación cruzada repetida (5 pliegues $\times$ 3 repeticiones; estratificada en clasificación);
@@ -238,13 +238,13 @@ Promedio S1-S2 (lineal / logística) & 18,1 & 0,87 & 1,00 [0,75; 1,00] & 0,67 [0
 Random Forest $\cdot$ 10 áreas & 15,2 & 0,87 & 0,77 [0,46; 0,95] & 0,72 [0,55; 0,85] & 0,74 \\
 \bottomrule
 \end{tabular}
-\caption{Resultados principales en Test (cohorte 2026, \textit{n}~=~52; 13 estudiantes en riesgo y 39 sin riesgo). Intervalos de Clopper--Pearson. El detalle de Train y Test está en el Anexo~C.}
+\caption{Resultados principales en Test (año 2026, \textit{n}~=~52; 13 estudiantes en riesgo y 39 sin riesgo). Intervalos de Clopper--Pearson. El detalle de Train y Test está en el Anexo~C.}
 \label{tb:resultados}
 \end{table*}
 
 Los tres modelos entrenados superan con claridad a la línea base y a la regla experta (tabla~\ref{tb:resultados}). Usar el puntaje bruto de S2 como estimación es incluso peor que predecir la media (MAE de 33,5 frente a 27,7), lo que confirma que los simulacros deben calibrarse. Los tres modelos entrenados alcanzan el mismo AUC en Test (0,87). Random Forest obtiene el menor MAE en esta dirección, pero sobreajusta: su error en Train es de 11,1 puntos frente a 15,2 en Test, su AUC cae de 0,97 a 0,87 y, en el sentido inverso, su MAE (26,0) es peor que el del modelo lineal (23,1).
 
-Por eso se eligió el modelo más sencillo, con el promedio de S1 y S2: no muestra sobreajuste (MAE de 19,3 en Train y 18,1 en Test, con IC 95\,\% de 14,6 a 21,7 en Test), es estable en el sentido inverso (AUC~=~0,82, el mismo valor que obtiene en Train) y detectó a los 13 estudiantes en riesgo de Test; su AUC en Test es de 0,87 (IC 95\,\%: 0,77--0,95). La sensibilidad de 1,00 tiene un intervalo de 0,75 a 1,00, de modo que, con 13 casos positivos, no se puede descartar que el modelo omita a algunos estudiantes en otra cohorte. Al incluir a los estudiantes con un simulacro faltante, imputado dentro del \textit{pipeline}, el modelo mantuvo un AUC de 0,86 y un MAE de 18,5.
+Por eso se eligió el modelo más sencillo, con el promedio de S1 y S2: no muestra sobreajuste (MAE de 19,3 en Train y 18,1 en Test, con IC 95\,\% de 14,6 a 21,7 en Test), es estable en el sentido inverso (AUC~=~0,82, el mismo valor que obtiene en Train) y detectó a los 13 estudiantes en riesgo de Test; su AUC en Test es de 0,87 (IC 95\,\%: 0,77--0,95). La sensibilidad de 1,00 tiene un intervalo de 0,75 a 1,00, de modo que, con 13 casos positivos, no se puede descartar que el modelo omita a algunos estudiantes en otro año. Al incluir a los estudiantes con un simulacro faltante, imputado dentro del \textit{pipeline}, el modelo mantuvo un AUC de 0,86 y un MAE de 18,5.
 
 Los intervalos de especificidad del modelo (0,50--0,81) y de la regla de la empresa (0,32--0,65) se solapan, por lo que compararlos por separado no basta. Como ambos clasificaron a los mismos 52 estudiantes, la comparación se hizo de forma pareada: el modelo acertó en 9 casos en los que la regla falló (2 estudiantes en riesgo y 7 sin riesgo), y la regla no acertó en ningún caso en que el modelo fallara (prueba exacta de McNemar, \textit{p}~=~0,004). En la misma línea, la diferencia de AUC entre el modelo y la regla fue de 0,20 (IC \textit{bootstrap} 95\,\%: 0,08--0,33).
 
@@ -305,15 +305,15 @@ El proceso que hoy sigue la institución, reforzar a quienes la empresa clasific
 
 \subsection{Simplicidad frente a complejidad}
 
-Un modelo con una sola variable igualó el AUC de los modelos con diez áreas y fue más estable al invertir los años. Random Forest ajustó mejor los datos de entrenamiento, pero ese ajuste no se trasladó a la cohorte siguiente. Con unos 50 estudiantes por año, este resultado es coherente con la recomendación de preferir modelos simples cuando la muestra es pequeña \parencite{hastie2009elements}, y tiene una ventaja práctica: la regla puede aplicarse en una hoja de cálculo y explicarse a docentes y familias. El modelo de áreas, aunque no se eligió para decidir, aporta la lectura diagnóstica de la tabla~\ref{tb:ridge}: S2, y en especial su Lectura crítica, concentra la información sobre el resultado oficial.
+Un modelo con una sola variable igualó el AUC de los modelos con diez áreas y fue más estable al invertir los años. Random Forest ajustó mejor los datos de entrenamiento, pero ese ajuste no se trasladó al año siguiente. Con unos 50 estudiantes por año, este resultado es coherente con la recomendación de preferir modelos simples cuando la muestra es pequeña \parencite{hastie2009elements}, y tiene una ventaja práctica: la regla puede aplicarse en una hoja de cálculo y explicarse a docentes y familias. El modelo de áreas, aunque no se eligió para decidir, aporta la lectura diagnóstica de la tabla~\ref{tb:ridge}: S2, y en especial su Lectura crítica, concentra la información sobre el resultado oficial.
 
 \subsection{Relación con los antecedentes}
 
-El hallazgo de que el desempeño previo predice el resultado coincide con la literatura que identifica el rendimiento académico anterior como uno de los predictores más usados del éxito académico \parencite{alyahyan2020predicting}. Frente a trabajos colombianos que explican el desempeño en Saber~11° con factores del estudiante y su entorno \parencite{timaran2019arboles}, este estudio usa una información distinta, disponible meses antes de la prueba y ya pagada por la institución, y la valida en una cohorte que el modelo no vio. Las métricas no son directamente comparables, porque cambian la población, la variable objetivo y la forma de validar. En cuanto al uso como alerta temprana, la precisión del modelo (0,50) indica que la mitad de los estudiantes reforzados no terminó en el cuartil inferior; ese costo es el que advierte la literatura sobre sistemas de alerta \parencite{bowers2013dropout}, y aquí se aceptó de forma explícita al fijar la relación de costos de 3 a 1. Por último, el estudio no mide si practicar con simulacros mejora el aprendizaje \parencite{roediger2006test}; solo evalúa el valor de sus puntajes como señal.
+El hallazgo de que el desempeño previo predice el resultado coincide con la literatura que identifica el rendimiento académico anterior como uno de los predictores más usados del éxito académico \parencite{alyahyan2020predicting}. Frente a trabajos colombianos que explican el desempeño en Saber~11° con factores del estudiante y su entorno \parencite{timaran2019arboles}, este estudio usa una información distinta, disponible meses antes de la prueba y ya pagada por la institución, y la valida en un año que el modelo no vio. Las métricas no son directamente comparables, porque cambian la población, la variable objetivo y la forma de validar. En cuanto al uso como alerta temprana, la precisión del modelo (0,50) indica que la mitad de los estudiantes reforzados no terminó en el cuartil inferior; ese costo es el que advierte la literatura sobre sistemas de alerta \parencite{bowers2013dropout}, y aquí se aceptó de forma explícita al fijar la relación de costos de 3 a 1. Por último, el estudio no mide si practicar con simulacros mejora el aprendizaje \parencite{roediger2006test}; solo evalúa el valor de sus puntajes como señal.
 
 \subsection{Limitaciones}
 
-Los resultados provienen de dos cohortes de una sola institución, con unos 50 estudiantes por año, y deben leerse como evidencia local. Con solo 13 estudiantes en riesgo en Test, los intervalos de las métricas de clasificación son amplios, y los umbrales se aprendieron con 12 casos positivos en Train, por lo que pueden variar de una cohorte a otra. La relación de costos de 3 a 1 es un supuesto, no un valor medido. El análisis principal excluye a los 15 estudiantes que faltaron a un simulacro, aunque el análisis de sensibilidad indica que el resultado se mantiene al incluirlos. El estudio no evaluó la calibración de las probabilidades, y la dificultad de los simulacros puede cambiar entre años o entre proveedores. Por último, el diseño es predictivo y no permite afirmar que los simulacros mejoren el resultado en Saber~11°.
+Los resultados provienen de dos años de una sola institución, con unos 50 estudiantes por año, y deben leerse como evidencia local. Con solo 13 estudiantes en riesgo en Test, los intervalos de las métricas de clasificación son amplios, y los umbrales se aprendieron con 12 casos positivos en Train, por lo que pueden variar de un año a otro. La relación de costos de 3 a 1 es un supuesto, no un valor medido. El análisis principal excluye a los 15 estudiantes que faltaron a un simulacro, aunque el análisis de sensibilidad indica que el resultado se mantiene al incluirlos. El estudio no evaluó la calibración de las probabilidades, y la dificultad de los simulacros puede cambiar entre años o entre proveedores. Por último, el diseño es predictivo y no permite afirmar que los simulacros mejoren el resultado en Saber~11°.
 
 %==================  CONCLUSIONES
 \section{Conclusiones}
@@ -323,7 +323,7 @@ Los resultados provienen de dos cohortes de una sola institución, con unos 50 e
     \item \textit{Decisión de refuerzo.} La regla basada en $\bar{S}$ cumple el objetivo de priorizar mejor que la clasificación de la empresa: en 2026 habría cubierto a todos los estudiantes en riesgo con 5 cupos menos, y la diferencia es estadísticamente significativa (\textit{p}~=~0,004). Se recomienda reemplazar el criterio del nivel I/1 por los tres niveles de prioridad propuestos.
     \item \textit{Elección del modelo.} Con muestras de unos 50 estudiantes por año, la estabilidad pesa más que el ajuste: un modelo de una sola variable igualó a los modelos complejos en Test y no sobreajustó. Esto permite aplicar la regla sin programas especializados.
     \item \textit{Calidad de los simulacros.} S2 concentra la información predictiva, y Lectura crítica es el área que más aporta, mientras que S1 añade poco una vez se conoce S2. Para la institución, esto sugiere pedirle a la empresa que S1 tenga mayor alineación con la prueba oficial o usarlo solo como alerta preliminar.
-    \item \textit{Alcance y trabajo futuro.} La evidencia es local y los intervalos son amplios. El siguiente paso es aplicar la regla a la cohorte 2027 antes de conocer el resultado oficial y contrastarla después (validación prospectiva), recalibrar los cortes cada año con la nueva cohorte y evaluar la calibración de las probabilidades.
+    \item \textit{Alcance y trabajo futuro.} La evidencia es local y los intervalos son amplios. El siguiente paso es aplicar la regla al año 2027 antes de conocer el resultado oficial y contrastarla después (validación prospectiva), recalibrar los cortes cada año con los nuevos datos y evaluar la calibración de las probabilidades.
 \end{enumerate}
 
 %==================  REFERENCIAS (numeradas en orden de aparición)
@@ -418,16 +418,16 @@ ID\_ESTUDIANTE & Identificador anonimizado. \\
 \label{tb:excluidas}
 \end{table}
 
-También se evitó la fuga en la definición de la etiqueta y de los umbrales. El corte del cuartil inferior de Train (195,0 puntos) se calculó solo con la cohorte 2025. Los umbrales de probabilidad se eligieron con predicciones fuera de pliegue dentro de Train. La etiqueta de Test (corte de 203,8 puntos) se usa únicamente para evaluar; nunca entra como predictor.
+También se evitó la fuga en la definición de la etiqueta y de los umbrales. El corte del cuartil inferior de Train (195,0 puntos) se calculó solo con el año 2025. Los umbrales de probabilidad se eligieron con predicciones fuera de pliegue dentro de Train. La etiqueta de Test (corte de 203,8 puntos) se usa únicamente para evaluar; nunca entra como predictor.
 
 \subsection*{A-2. Multicolinealidad}
 
-La colinealidad se revisó solo en Train (figura~\ref{fig:colinealidad}). La correlación más alta entre dos áreas fue $|r|$~=~0,67 y los factores de inflación de la varianza (VIF) oscilaron entre 1,21 y 2,94. Entre S1 y S2 globales, \textit{r}~=~0,55 (VIF~=~1,44); este valor es menor que el de 0,64 reportado en la sección~II porque aquí se calcula solo con Train (2025, \textit{n}~=~45), mientras que aquel combina las dos cohortes (\textit{n}~=~97). Ninguna pareja supera el umbral de 0,90. El puntaje global y sus propias áreas sí están muy relacionados (hasta \textit{r}~=~0,83), y el global es una combinación lineal de ellas; por eso nunca se usaron en el mismo modelo.
+La colinealidad se revisó solo en Train (figura~\ref{fig:colinealidad}). La correlación más alta entre dos áreas fue $|r|$~=~0,67 y los factores de inflación de la varianza (VIF) oscilaron entre 1,21 y 2,94. Entre S1 y S2 globales, \textit{r}~=~0,55 (VIF~=~1,44); este valor es menor que el de 0,64 reportado en la sección~II porque aquí se calcula solo con Train (2025, \textit{n}~=~45), mientras que aquel combina los dos años (\textit{n}~=~97). Ninguna pareja supera el umbral de 0,90. El puntaje global y sus propias áreas sí están muy relacionados (hasta \textit{r}~=~0,83), y el global es una combinación lineal de ellas; por eso nunca se usaron en el mismo modelo.
 
 \begin{figure}[!t]
     \centering
     \includegraphics[width=0.95\columnwidth]{img/figA1_correlacion_areas.png}
-    \caption{Correlación entre las diez áreas de los simulacros, calculada solo con Train (cohorte 2025).}
+    \caption{Correlación entre las diez áreas de los simulacros, calculada solo con Train (año 2025).}
     \label{fig:colinealidad}
 \end{figure}
 
@@ -471,7 +471,7 @@ Se asumió que dejar sin refuerzo a un estudiante en riesgo (falso negativo) es 
 \begin{figure}[!t]
     \centering
     \includegraphics[width=\columnwidth]{img/figB2_matrices_confusion.png}
-    \caption{Matrices de confusión en Test (cohorte 2026): modelo elegido frente a la regla de la empresa.}
+    \caption{Matrices de confusión en Test (año 2026): modelo elegido frente a la regla de la empresa.}
     \label{fig:confusion}
 \end{figure}
 
@@ -494,11 +494,11 @@ Media & $(182{,}5;\ 202{,}4]$    & 9  & 4 (44\,\%) & 217,0 \\
 Baja  & $> 202{,}4$       & 26 & 0 (0\,\%)  & 261,2 \\
 \bottomrule
 \end{tabularx}
-\caption{Prioridades en Test (cohorte 2026) según el promedio de S1 y S2.}
+\caption{Prioridades en Test (año 2026) según el promedio de S1 y S2.}
 \label{tb:prioridades}
 \end{table}
 
-La ruta de uso queda así: después de S1 se emite una alerta preliminar; después de S2 se calcula el promedio y se asigna la prioridad; la inasistencia a cualquiera de los simulacros sube la prioridad un nivel; y, cuando llega el resultado oficial, el modelo se reentrena sumando la nueva cohorte.
+La ruta de uso queda así: después de S1 se emite una alerta preliminar; después de S2 se calcula el promedio y se asigna la prioridad; la inasistencia a cualquiera de los simulacros sube la prioridad un nivel; y, cuando llega el resultado oficial, el modelo se reentrena sumando los datos del nuevo año.
 
 \section*{Anexo C. Métricas, línea base y sobreajuste}
 \markboth{Anexo C}{Anexo C}
@@ -561,7 +561,7 @@ La tabla~\ref{tb:clasificacion} compara los clasificadores y la figura~\ref{fig:
 \begin{figure}[!t]
     \centering
     \includegraphics[width=0.9\columnwidth]{img/figC2_curvas_roc.png}
-    \caption{Curvas ROC en Test (cohorte 2026) y punto de operación de la regla de la empresa.}
+    \caption{Curvas ROC en Test (año 2026) y punto de operación de la regla de la empresa.}
     \label{fig:roc}
 \end{figure}
 
