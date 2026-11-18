@@ -1,0 +1,9 @@
+# Paquetes necesarios para ejecutar Anexo_tecnico_modelo_Saber11.ipynb
+# Instalar con:  pip install -r requirements.txt
+numpy
+pandas
+matplotlib
+scikit-learn
+openpyxl
+scipy
+jupyter
