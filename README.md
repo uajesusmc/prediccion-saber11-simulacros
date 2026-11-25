@@ -20,7 +20,7 @@ La Institución Educativa Técnica Agrícola (I.E.T.A.) Juan Domínguez Romero d
 | Carpeta | Contenido |
 | --- | --- |
 | `datos/` | Bases de modelado anonimizadas de 2025 y 2026. Las hojas `LEEME` y `DICCIONARIO` de cada archivo describen las variables |
-| `analisis/` | `Anexo_tecnico_modelo_Saber11.ipynb` (modelos, umbrales, figuras de los anexos), `incertidumbre_bootstrap_mcnemar.py` (intervalos de Clopper–Pearson, bootstrap y prueba de McNemar) e `interpretabilidad_coeficientes.py` (coeficientes, intervalos y valores p) |
+| `analisis/` | `Anexo_tecnico_modelo_Saber11.ipynb` (modelos, umbrales, figuras de los anexos), `incertidumbre_bootstrap_mcnemar.py` (intervalos de Clopper–Pearson, bootstrap y prueba de McNemar) `interpretabilidad_coeficientes.py` (coeficientes, intervalos y valores p) y `figura1_distribucion_anios.py` (figura 1 del artículo) |
 | `herramienta/` | Hoja de cálculo para aplicar la regla de prioridades a los estudiantes de un año nuevo |
 | `articulo/` | Artículo en LaTeX (`main.tex`), figuras (`img/`) y PDF compilado |
 
@@ -33,6 +33,7 @@ cd analisis
 jupyter notebook Anexo_tecnico_modelo_Saber11.ipynb     # lee las bases desde ../datos/
 python incertidumbre_bootstrap_mcnemar.py ../datos
 python interpretabilidad_coeficientes.py ../datos
+python figura1_distribucion_anios.py ../datos fig1_distribucion_anios.png
 ```
 
 El cuaderno fija la semilla aleatoria en 2025 y guarda las figuras en `analisis/fig/`.

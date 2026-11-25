@@ -134,7 +134,7 @@ Se usaron las bases de modelado anonimizadas de 2025 y 2026, con una fila por es
 
 \begin{figure*}[!t]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/fig1_distribucion_cohortes.png}
+    \includegraphics[width=0.9\textwidth]{img/fig1_distribucion_anios.png}
     \caption{Distribución del puntaje global por prueba y año (el rombo indica la media).}
     \label{fig:distribucion}
 \end{figure*}
@@ -168,6 +168,8 @@ Se usaron las bases de modelado anonimizadas de 2025 y 2026, con una fila por es
 
 Se plantearon dos tareas supervisadas sobre la misma base. En la regresión, el objetivo es SB11\_GLOBAL. En la clasificación, el objetivo es si el estudiante queda en el cuartil inferior de Saber~11° de su propio año (riesgo~=~1). Se eligió una definición relativa para que la etiqueta señale, en cada promoción, al grupo de menor desempeño y mantenga una prevalencia estable entre años. El cuartil define quién está en riesgo, no cuántos estudiantes reciben apoyo: ese número lo determina el umbral de decisión, que favorece la sensibilidad porque omitir a un estudiante en riesgo se considera más costoso que reforzar a uno que no lo necesitaba (Anexo~B). Por eso el grupo con refuerzo resulta mayor que el cuartil. La prevalencia de la clase positiva es del 26,7\,\% en Train y del 25,0\,\% en Test.
 
+Conviene distinguir las dos tareas. El puntaje global no se clasifica: se estima con la regresión y se evalúa con MAE, RMSE y $R^2$. La clasificación es binaria (riesgo~=~1 o riesgo~=~0) y por eso se evalúa con métricas para dos clases. La regla de la empresa se llevó a esa misma forma: el nivel I/1 cuenta como riesgo, y los niveles M/2 y S/3, como sin riesgo. Las tres prioridades de la sección IV-C no son clases del modelo; se obtienen después, al aplicar dos cortes a la probabilidad que entrega el clasificador binario.
+
 \subsection{Separación de los datos}
 
 La división fue temporal: Train~=~año 2025 (\textit{n}~=~45; 46,4\,\%) y Test~=~año 2026 (\textit{n}~=~52; 53,6\,\%). Se prefirió a una partición aleatoria porque reproduce el uso real del modelo (aprender con una promoción y aplicarlo a la siguiente) y evita que estudiantes de un mismo año queden repartidos entre entrenamiento y prueba \parencite{hastie2009elements,kaufman2012leakage}. El conjunto Test solo se usó para la evaluación final. Dentro de Train:
@@ -200,7 +202,7 @@ Todos los modelos se implementaron en Python con scikit-learn \parencite{pedrego
 \midrule
 \multirow{5}{*}{\shortstack[l]{Clasifi-\\cación}}
  & Línea base & Clase mayoritaria (nadie en riesgo) \\
- & Regla experta & Nivel I/1 asignado por la empresa en S2 \\
+ & Regla experta & Nivel de la empresa en S2: I/1~=~riesgo; M/2 y S/3~=~sin riesgo \\
  & Logística & Promedio de S1 y S2 estandarizado \\
  & Logística L2 & 10 áreas estandarizadas; $C$ entre $10^{-2}$ y $10^{2}$ \\
  & Random Forest & 10 áreas; clases balanceadas; misma rejilla que en regresión \\
@@ -282,7 +284,7 @@ El modelo con las diez áreas permite ver qué impulsa la predicción (tabla~\re
 
 \subsection{Regla de prioridades}
 
-Como el modelo usa una sola variable, cada umbral de probabilidad equivale a un valor de $\bar{S}$, lo que convierte el modelo en una regla explícita (Anexo~B):
+Como el modelo usa una sola variable, cada umbral de probabilidad equivale a un valor de $\bar{S}$, lo que convierte el modelo en una regla explícita (Anexo~B). Las métricas de la sección IV-A se calcularon con el umbral de decisión, que separa a quienes reciben refuerzo ($\bar{S} \leq 202{,}4$) de quienes no. Las prioridades alta y media solo dividen en dos niveles a esos mismos estudiantes reforzados:
 
 \begin{itemize}
     \item \textit{Prioridad alta:} $\bar{S} \leq 182{,}5$ (refuerzo intensivo).
